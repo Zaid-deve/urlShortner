@@ -1,0 +1,35 @@
+* {
+    user-select: none;
+}
+
+/* Button Loading State */
+.loading {
+    pointer-events: none;
+    opacity: 0.7;
+    position: relative;
+    height: 50px;
+}
+
+.loading .btn-text {
+    display: none;
+}
+
+.loading .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 0.6s linear infinite;
+}
+
+/* Keyframes for spinner */
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
