@@ -2,7 +2,7 @@ $(document).ready(function () {
     const apiUrl = `urlShortner/api/index.php`
 
     function isValidURL(url) {
-        var pattern = /^(https?:\/\/)?([\w\d-]+\.)+[\w\d]{2,}(:\d+)?(\/[\w\d#?&=.-]*)*\/?$/i;
+        var pattern = /(https?:\/\/(?:localhost(:\d+)?|(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,})|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:localhost(:\d+)?|(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,})|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
         return pattern.test(url);
     }
 
