@@ -9,7 +9,7 @@ if (!isset($data['url']) || !filter_var($data['url'], FILTER_VALIDATE_URL)) {
 }
 
 $original_url = $data['url'];
-$short_code = substr(md5(uniqid()), 0, 6);
+$short_code = substr(md5(uniqid()), 0, 8);
 
 try {
     $stmt = $pdo->prepare('INSERT INTO urls (original_url, short_url) VALUES (?, ?)');

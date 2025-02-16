@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    const apiUrl = `urlShortner/api/index.php`
+
     function isValidURL(url) {
         var pattern = /^(https?:\/\/)?([\w\d-]+\.)+[\w\d]{2,}(:\d+)?(\/[\w\d#?&=.-]*)*\/?$/i;
         return pattern.test(url);
@@ -58,7 +60,7 @@ $(document).ready(function () {
 
         try {
             let response = await $.ajax({
-                url: "http://localhost/urlShortner/api/index.php",
+                url: `${location.origin}/${apiUrl}`,
                 method: "POST",
                 contentType: "application/json",
                 data: JSON.stringify({ url: url }),

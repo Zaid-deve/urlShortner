@@ -19,7 +19,6 @@ try {
     } else {
         http_response_code(302);
         header("Location: /urlShortner/error");
-        // echo json_encode(["success" => false, "message" => "URL not found"]);
     }
 } catch (Exception $e) {
     http_response_code(500);
